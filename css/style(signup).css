@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;500;600&family=Pacifico&family=Poppins:wght@500;600;800&display=swap');
+body{
+    background: white;
+}
+.logo{
+  text-align: center;
+}
+
+.border{
+  border: 0px solid; 
+    background: none;
+    padding-left: 400px;
+    padding-right: 400px;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+.colorbt{ 
+    color: red;
+}
+.colorbtInput{ 
+    box-shadow: inset 0 0 0 2px red;
+}
+.colorDefault{
+    box-shadow: inset 0 0 0 1px #878787;
+}
+header{
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: black;
+}
+.withEmail{
+  text-align: center;
+    box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+    display: block;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color:  white;
+    font-weight: 700;
+}
+
+.whatsEmail{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+#emailField{
+    border: 4px solid black;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    padding: 14px;
+    align-items: center;
+}
+
+.password{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 1px;
+}
+#passwordField{
+    border: 4px solid black;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    padding: 14px;
+    align-items: center;
+}
+.whatshould{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 1px;
+}
+
+#nameField{
+    border: 4px solid black;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    padding: 14px;
+    align-items: center;
+}
+
+
+
+.dateOfBirth{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 1px;
+}
+
+#monthField{
+    border: 4px solid black;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    appearance: none;
+    text-indent: 0.01px;
+    border-radius: 10px;
+    padding: 14px 44px 14px 20px;
+
+}
+
+.month{
+    font-weight: normal;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    padding-bottom: 1px;
+}
+
+#dayField{
+    border: 4px solid black;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    appearance: none;
+    text-indent: 0.01px;
+    border-radius: 10px;
+    padding: 14px 44px 14px 14px;
+
+}
+
+.day{
+    font-weight: normal;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    padding-bottom: 1px;
+}
+
+#yearField{
+    border: 4px solid black;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    appearance: none;
+    text-indent: 0.01px;
+    border-radius: 10px;
+    padding: 14px 44px 14px 14px;
+}
+
+.year{
+    font-weight: normal;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    ffont-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    padding-bottom: 1px;
+}
+
+
+.genderTxt{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+#male{
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 16px;
+    user-select: none;
+    width: 16px;
+    top: 4px;
+    position: relative;
+}
+
+.male{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    padding-left: 12px;
+    padding-right: 24px;
+}
+
+#female{
+
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 16px;
+    user-select: none;
+    width: 16px;
+    flex-shrink: 0;
+    top: 4px;
+    position: relative;
+}
+
+.female{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    padding-left: 12px;
+    padding-right: 24px;
+}
+
+
+.btn{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: 44%;
+    right: 50%;
+    background-color: black; 
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.login{
+    text-align: center;
+    font-family: 'Pacifico', cursive; 
+    font-size: 20px;
+
+}
+
+a{
+    text-decoration: none;
+}
