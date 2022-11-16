@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign up</title>
+
+  <link href="css\style(signup).css" rel="stylesheet">
+
+  <script type="text/javascript" src="js/script.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="icon" href="">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="index.html"><img src="img/dd.png" height="200px" class="image_logo"></a>
+    </div>
+    <div class="form_style">
+<div class="border">
+<nav>
+</nav>
+<header>
+     <p class="withEmail">Sign up with email address</p>
+</header>
+<br>
+<main>
+  <form>
+    <label for="email" class="whatsEmail">What's your email?</label><br>
+    <input type="text" class="colorDefault" id="emailField" name="email" placeholder="Enter your email" ><div id="emailError" class=""></div><br>
+    <label for="password" class="password">Create a password</label><br>
+    <input type="password" class="colorDefault" id="passwordField" name="password" placeholder="Create a password"><div id="passwordError" class=""></div><br>
+    <label for="name" class="whatshould">What is your name?</label><br>
+    <input type="text" class="colorDefault" id="nameField" name="name" placeholder="Enter a profile name"><div id="nameError" class=""></div><br>
+  </form> 
+  <p class="dateOfBirth">What is your date of birth?</p>
+  <label for="month" class="month">Month</label>
+  <select id="monthField" class="colorDefault" name="month" required="" aria-invalid="true"><option selected="" disabled="" value="">Month</option><option value="01">January</option><option value="02">February</option><option value="03">March</option><option value="04">April</option><option value="05">May</option><option value="06">June</option><option value="07">July</option><option value="08">August</option><option value="09">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+  <div id="monthError" class=""></div>
+  <label for="day" class="day">Day</label>
+  <input type="number"  id="dayField" inputmode="numeric" maxlength="2" name="day" pattern="((0?[1-9])|([12][0-9])|(3[01]))" placeholder="DD" class="colorDefault">
+  <div id="dayError" class=""></div>
+  <label for="year" class="year">Year</label>
+  <input type="number" id="yearField" inputmode="numeric" maxlength="4" name="year" pattern="(19[0-9]{2})|(200)[0-8]" placeholder="YYYY" required=""class="colorDefault">
+  <div id="yearError" class=""></div>
+  <p class="genderTxt">What's your gender?</p>
+  <form>
+    <input type="radio" id="male" name="gender" value="male">
+     <label for="male" class="male">Male</label><br>
+     <input type="radio" id="female" name="gender" value="female" checked>
+        <label for="female" class="female">Female</label><br>
+      </form><br><br>
+    </main>
+</div>
+<footer>
+ <button type="button" class="btn" onclick='saveAccount()'><a href="login.html">Sign up</p></button>
+ <br>
+ <p class="login">Have an account?<a href="login.html"> Log in.</a></p>
+</footer>
+</div> 
+
+<script>
+$("img").animate({
+width: "500px"
+}, 900);
+
+</script>
+</body>
+</html>

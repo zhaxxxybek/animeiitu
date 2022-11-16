@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="img/gear.ico" rel="shortcut icon" type="image/x-icon">
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=05d0a002-43fb-4639-9a78-485fa4491b41" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css\style(user).css">
+	<link rel="icon" href="">
+	<script src="https://kit.fontawesome.com/51c82fa37e.js" crossorigin="anonymous"></script>
+	<title>User page</title>
+</head>
+<body onload="myFunction()" style="margin:0;">
+	<div id="loader"></div>
+	<div style="max-width: 1000px; margin: auto; box-shadow: none; display:none;" id="myDiv" class="animate-bottom">
+
+		
+		<div class="header">
+		<div class="logo">
+			<a href="img/logo.gif" width="300px" class="image_logo"></a>
+		</div>
+		<div class="wrapper">
+			<nav class="main-nav">
+
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html">About Us</a></li>
+					<li><a href="anitube.html">AniTube</a></li>
+					<li><a href="Opening.html">Openings Listen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="profile">
+    	<div class="grid-container">
+    	 <div class="item1">Profile</div>
+    	 <div class="item2"><img src="https://otkritkis.com/wp-content/uploads/2021/11/lg02qq-1.gif" width="250px"></div>
+    	 <div class="item3">
+    	 	<h1>Hello, user!</h1> 
+    	 		<h3>Name: Zhaksybek Turmanbet</h3>
+    	 		<h3>Status: Online</h3>
+    	 		<h4>Information:Student of second course in International IT  University</h4>
+    	 	<button class="shopButton"><a href="https://www.instagram.com/aisultan1a">INST</a></button>
+    	 </div>  
+    	</div>
+    </div>
+		<hr>
+		<div class="buttonDiv">
+		<input class="button" type="button" value="Go to the main" onclick='mainPage()' />
+		<input class="button" type="submit" value="Log out" onclick="logOut()">
+	</div>
+	<br>
+		<footer>
+	<ul class="links">
+		<li><a href="https://www.instagram.com/_zhakkksybek_">ZAZH INTERTAIMENT</a></li>
+        <li><a href="https://privacy.umusic.com/">Privacy Policy</a><li>
+        <li><a href="https://www.instagram.com/_zhakkksybek_">Cookies</a><li>
+        <li><a href="https://www.instagram.com/_zhakkksybek_">Terms & Conditions</a><li>
+        </ul>
+        <div class="social__networks">
+        	<a href="https://www.instagram.com/_zhakkksybek_"><i class="fab fa-instagram"></i></a>
+    		<a href="https://www.instagram.com/_zhakkksybek_"><i class="fab fa-twitter"></i></a>
+    		<a href="https://www.instagram.com/_zhakkksybek_"><i class="fab fa-facebook"></i></a>
+    		<a href="https://www.instagram.com/_zhakkksybek_"><i class="fab fa-spotify"></i></a>
+    		<a href="https://www.instagram.com/_zhakkksybek_"><i class="fab fa-youtube"></i></a>
+    	</div>
+    	<div id="map">
+    	</div>
+	<script type="text/javascript">
+		var myVar;
+
+		function myFunction() {
+			myVar = setTimeout(showPage, 3000);
+		}
+
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("myDiv").style.display = "block";
+		}
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map('map', {
+				center: [43.223444, 76.906473],
+				zoom: 15,
+				controls: ['smallMapDefaultSet']
+			}, {
+				searchControlProvider: 'yandex#search'
+			}),
+
+			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+				'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				hintContent: 'Hello',
+				balloonContent: 'Это красивая метка'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img\myIcon.png',
+				iconImageSize: [40, 45],
+				iconImageOffset: [10, -40]
+			});
+
+			myMap.geoObjects
+			.add(myPlacemark);
+		});
+		checkLogIn();
+	</script>
+    	<p class="copyright"> Copyright© 2022.Almaty.From ZhaksybeAisultanNurbolat. All Rights Reserved</p>
+    </footer>
+</body>
+</html>

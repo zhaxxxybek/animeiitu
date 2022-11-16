@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/opening.css">
+
+    <script src="js/opening.js" defer></script>
+
+</head>
+<body>
+    
+<div class="container">
+
+
+    <h1 class="heading"> openings </h1>
+            <div class="wrapper">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="main.html">Category</a></li>
+                    <li><a href="anitube.html">AniTube</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    <div class="box-container">
+    	<div class="box" data-src="mp3/music-8.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/bleachanime.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Bleach</h3>
+            </div>
+        </div>
+    	  <div class="box" data-src="mp3/music-7.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/naruto.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Naruto</h3>
+            </div>
+        </div>
+             <div class="box" data-src="mp3/music-6.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/benzopila.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Chainsaw Man</h3>
+            </div>
+        </div>
+        <div class="box" data-src="mp3/music-9.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/evange.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Evangelion Cruel Angels Thesis</h3>
+            </div>
+        </div>
+
+        <div class="box" data-src="mp3/music-1.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/magic.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Sorcery Fight: Jujutsu Kaisen</h3>
+            </div>
+        </div>
+
+        <div class="box" data-src="mp3/music-2.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/fate.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Fate Stay Night:Unlimited blade works</h3>
+            </div>
+        </div>
+
+        <div class="box" data-src="mp3/music-3.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/MHA movie.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>My Hero Acadmia</h3>
+            </div>
+        </div>
+
+        <div class="box" data-src="mp3/music-4.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/AOT movie.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Attack on titan:Chronicle </h3>
+            </div>
+        </div>
+
+        <div class="box" data-src="mp3/music-5.mp3">
+            <div class="image">
+                <div class="play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <img src="image/erased.jpeg" alt="">
+            </div>
+            <div class="content">
+                <h3>Erased</h3>
+            </div>
+        </div>
+
+        
+    </div>
+
+</div>
+
+<div class="music-player">
+    <div id="close-player" class="fas fa-angle-up"></div>
+    <h3 class="music-title">(play your song)</h3>
+    <audio src="" controls></audio>
+</div>
+
+<footer>
+    <ul class="links">
+        <li><a href="https://privacy.umusic.com/">Privacy Policy</a><li>
+        <li><a href="https://www.instagram.com/_zhakkksybek_">Cookies</a><li>
+        <li><a href="https://privacy.umusic.com/terms/">Terms & Conditions</a><li>
+        </ul>
+        <div class="social__networks">
+            <a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div id="map">
+        </div>
+    <script type="text/javascript">
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map('map', {
+                center: [43.223444, 76.906473],
+                zoom: 15,
+                controls: ['smallMapDefaultSet']
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                ),
+
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Hello',
+                balloonContent: 'Это красивая метка'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/myIcon.png',
+                iconImageSize: [40, 45],
+                iconImageOffset: [10, -40]
+            });
+
+            myMap.geoObjects
+            .add(myPlacemark);
+        });
+        checkLogIn();
+    </script>
+        <p class="copyright"> Copyright© 2022.Designed by Zhaksybek, Aisultan, Nurbolat IITU. All Rights Reserved</p>
+    </footer>  
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+	<link rel="stylesheet" href="css\style(admin).css">
+	<title>Admin page</title>
+</head>
+<body>
+<section class="Home">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.gif" width="250px"></a>
+                </div>
+                <div class="navigation__bar">
+                    <a href="main.html">Home</a>
+                    <a href="index.html">About Us</a>
+                    <a href="AniTube.html">AniTube</a>
+                    <a href="opening.html">Listen</a>
+                </div>
+            </nav>
+        </header>
+    </section>
+	<div class="border">
+	<div >
+		<h1>Hello, admin!</h1> 
+		<input class="btn" type="button" value="Go to main" onclick='mainPage()' />
+		<hr>
+		<form  name="myForm">
+			<label>Choose an action:</label>
+			<select  name="selectTable"  class="inputs">
+				<option value="">Select One …</option>
+				<option value="create">Create</option>
+				<option value="read">Read/Mute</option>
+				<option value="update">Update</option>
+				<option value="delete">Delete</option>
+			</select>
+		</form>
+		<div id="div1" class="invisibility">
+			<div >
+				<label for="nameField">Name</label>
+				<input type="text"  id="nameField" size="20" required class="inputs">
+			</div> 
+
+			<div class="form-group">
+				<label for="emailField">Email</label>
+				<input type="email"  id="emailField" size="20" required  class="inputs">
+			</div> 
+
+			<label>Gender</label>
+			<div class="form-check">
+				<input  type="radio" name="r1" id="exampleRadios1" value="option1" checked>
+				<label  for="exampleRadios1">
+					Male
+				</label>
+			</div>
+			<div class="form-check">
+				<input  type="radio" name="r1" id="exampleRadios2" value="option2">
+				<label  for="exampleRadios2">Female</label>
+			</div>
+
+			<div >
+				<label for="passwordField">Password</label>
+				<input type="text"  id="passwordField" size="20" required  class="inputs">
+			</div>
+
+			<div >
+				<label for="pass2Field">Password confirm</label>
+				<input type="text"  id="pass2Field" size="20" required  class="inputs">
+			</div>
+			<p class="dateOfBirth">What is your date of birth?</p>
+		      <label for="month" class="month">Month</label>
+		      <select id="monthField" class="colorDefault" name="month" required="" aria-invalid="true"><option selected="" disabled="" value="">Month</option><option value="01">January</option><option value="02">February</option><option value="03">March</option><option value="04">April</option><option value="05">May</option><option value="06">June</option><option value="07">July</option><option value="08">August</option><option value="09">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+		      <div id="monthError" class=""></div>
+		      <label for="day" class="day">Day</label>
+		      <input type="number"  id="dayField" inputmode="numeric" maxlength="2" name="day" pattern="((0?[1-9])|([12][0-9])|(3[01]))" placeholder="DD" class="colorDefault">
+		      <div id="dayError" class=""></div>
+		      <label for="year" class="year">Year</label>
+		      <input type="number" id="yearField" inputmode="numeric" maxlength="4" name="year" pattern="(19[0-9]{2})|(200)[0-8]" placeholder="YYYY" required=""class="colorDefault">
+		      <div id="yearError" class=""></div>
+			<div id="regErr"></div>
+			<hr>
+			
+			<input class="btn" type="button" value="Register" onclick='saveAccountAdminPage()' /></div>
+			</div>
+			<div id="div2" class="invisibility">
+				<hr>
+				<table id="tableMute" >
+					<tr>
+						<td>id</td>
+						<td>Name</td>
+						<td>Data</td>
+						<td>EMail</td>
+						<td>Gender</td>
+						<td>Mute</td>
+					</tr>
+				</table>
+			</div>
+			<div id="div3" class="invisibility"><br>Select user by email:
+				<form name="mailForm">
+					<select id="selectMail">
+						<option value="">Select One …</option>
+					</select>
+				</form>
+				<hr>
+				<table >
+					<tr>
+						<td>key:</td>
+						<td><input type="text" id="reKeyField" size="20" readonly class="inputs"></td>
+					</tr>
+					<tr>
+						<td>name:</td>
+						<td><input type="text" id="reNameField" size="20" class="inputs"></td>
+					</tr>
+					<tr>
+						<td>mail:</td>
+						<td><input type="text" id="reEmailField" size="20" class="inputs"></td>
+					</tr>
+					<tr>
+						<td>gender:</td>
+						<td id="genderField"></td>
+					</tr>
+					<tr>
+						
+						<td><input type="radio" name="r2" value="0">Male<br>
+							<input type="radio" name="r2" value="1">Female<br>
+							<input type="radio" name="r2" value="2">Non-binary<br>
+						</tr>
+						<tr>
+							<td>pass:</td>
+							<td><input type="text" id="rePassField" size="20"  class="inputs"></td>
+						</tr>
+						<tr>
+							<td>pass confim:</td>
+							<td><input type="text" id="rePass2Field" size="20" class="inputs"></td>
+						</tr>
+						<tr>
+							<td>data:</td>
+							<td><input type="text" id="reDataField" size="20" class="inputs"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input class="btn" type="button" value="Update user" onclick='reStorage()' /></td>
+						</tr>
+					</table>
+					<div id="searchErr"></div>
+
+				</div>
+				<div id="div4" class="invisibility">
+					<hr>
+					<table id="tableDel">
+						<tr>
+							<td>id</td>
+							<td>Name</td>
+							<td>Data</td>
+							<td>EMail</td>
+							<td>Gender</td>
+							<td>Mute</td>
+						</tr>
+					</table></div>
+		</div></div>
+		<script type="text/javascript">
+			tableDel.addEventListener('click', function(evt){
+				// Событие нажатия на кнопку удаления
+				if(evt.target.closest('.deleteRow')) {
+					evt.target.closest('tr').remove()
+				}
+			})
+
+			function fillingSelect(){
+				// Cелектер емаилов 
+				var select = document.getElementById("selectMail"); 
+				var options = [];
+				counter=0;
+				for (var i = localStorage.length; i >= 0; i--) {
+				var user = JSON.parse(localStorage.getItem(i));
+			if (user) {
+				options[counter]=user.email;
+				counter++;
+			}}
+
+			for(var i = 0; i < options.length; i++) {
+			    var opt = options[i];
+			    var el = document.createElement("option");
+			    el.textContent = opt;
+			    el.value = opt;
+			    select.appendChild(el);
+
+			}}
+			var tabSelect = myForm.selectTable;
+			var emailSelect = mailForm.selectMail;
+
+			function disDiv(){
+				//Добавляет невидимость div при создании страницы
+				var div1 = document.getElementById("div1");
+				var div2 = document.getElementById("div2");
+				var div3 = document.getElementById("div3");
+				var div4 = document.getElementById("div4");
+				div1.classList.add("invisibility");
+				div2.classList.add("invisibility");
+				div3.classList.add("invisibility");
+				div4.classList.add("invisibility");
+			}
+
+			function disabledDiv(divV){
+				// убирает невидимость
+				var divVir = document.getElementById(divV);
+				divVir.classList.remove("invisibility");
+			}
+
+			function changeOption(){
+				// Действие при выборе в 1 селекторе
+			disDiv();
+			var selectedOption = tabSelect.options[tabSelect.selectedIndex];
+			if(tabSelect.value=="create"){
+				disabledDiv("div1");
+			}
+			if(tabSelect.value=="read"){
+				disabledDiv("div2");
+				reloadTable();
+				bus(true);
+
+			}
+			if(tabSelect.value=="update"){
+				disabledDiv("div3");
+			}
+			if(tabSelect.value=="delete"){
+				disabledDiv("div4");
+				reloadTable();
+				bus(true);
+			}
+		}
+
+			function changeOptionMail(){
+				// Действие при выборе в 1 селекторе
+			searchByEmail(emailSelect.value);
+			}
+
+		emailSelect.addEventListener("change", changeOptionMail);
+		tabSelect.addEventListener("change", changeOption);
+		fillingSelect();
+		bus(true);
+		checkLogIn();
+	</script>
+</body>
+</html>

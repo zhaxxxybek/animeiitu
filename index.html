@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css\indexStyles.css">
+	<script src="https://kit.fontawesome.com/51c82fa37e.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=05d0a002-43fb-4639-9a78-485fa4491b41" type="text/javascript"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="img/logo.gif" width="300px" class="image_logo"></a>
+		</div>
+		<div class="wrapper">
+			<nav class="main-nav">
+				<ul>
+					<li><a href="main.html">Category</a></li>
+					<li><a href="wiki.html">Anime Wiki</a></li>
+					<li><a href="#AboutUs">About Us</a></li>
+					<li><a href="anitube.html">AniTube</a></li>
+					<li><a href="opening.html">Opening</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="user.html">User page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+	<div class="Article">
+		<h2 class="text2">Welcome to ANIME WATCH SITE!</h2>
+		<img src="img/ddd.png" class="unnamedImage">
+	</div>
+	<div id="AboutUs">
+		<h1 class="textAboutUs">About Us</h1>
+		<p class="textInfo">Welcome to one of the first Kazakh sites to view one of the cultures of Japan-Anime! Watch, enjoy! <b>5 years</b>. More than <b>1.000.00</b> followers of happy customers all over the world. Thank you for choosing us!</p> 
+	</div>
+    <section class="boxes">
+      <div class="box">
+        <h3>Zhaksybek</h3>
+        <img src="img/zhaks.jpg" width="300px" class="gridImages">
+      </div>
+      <div class="box">
+        <h3> Aisultan</h3>
+       <img src="img/ais.jpeg" width="300px" class="gridImages">
+      </div>
+      <div class="box">
+        <h3>Nurbolat</h3>
+        <img src="img/372.jpg" width="300px" class="gridImages">
+      </div>
+     
+    </section>
+	<div class="InfoAboutBP">
+	<div class="textInfo">
+		<p>Anime (Japanese: アニメ, IPA: [aɲime] (listen)) is hand-drawn and computer-generated animation originating from Japan. Outside of Japan and in English, anime refers specifically to animation produced in Japan.[1] However, in Japan and in Japanese, anime (a term derived from a shortening of the English word animation) describes all animated works, regardless of style or origin. Animation produced outside of Japan with similar style to Japanese animation is commonly referred to as anime-influenced animation.
+
+The earliest commercial Japanese animations date to 1917. A characteristic art style emerged in the 1960s with the works of cartoonist Osamu Tezuka and spread in following decades, developing a large domestic audience. Anime is distributed theatrically, through television broadcasts, directly to home media, and over the Internet. In addition to original works, anime are often adaptations of Japanese comics (manga), light novels, or video games. It is classified into numerous genres targeting various broad and niche audiences.
+
+Anime is a diverse medium with distinctive production methods that have adapted in response to emergent technologies. It combines graphic art, characterization, cinematography, and other forms of imaginative and individualistic techniques.[2] Compared to Western animation, anime production generally focuses less on movement, and more on the detail of settings and use of "camera effects", such as panning, zooming, and angle shots.[2] Diverse art styles are used, and character proportions and features can be quite varied, with a common characteristic feature being large and emotive eyes.[3]
+
+The anime industry consists of over 430 production companies, including major studios such as Studio Ghibli, Kyoto Animation, Sunrise, Bones, Ufotable, MAPPA, Wit Studio, CoMix Wave Films and Toei Animation. Since the 1980s, the medium has also seen widespread international success with the rise of foreign dubbed, subtitled programming, and since the 2010s its increasing distribution through streaming services and a widening demographic embrace of anime culture, both within Japan and worldwide.[4] As of 2016, Japanese animation accounted for 60% of the world's animated television shows.[5]</p>
+	</div>
+</div>
+	
+<footer>
+	<ul class="links">
+        <li><a href="https://privacy.umusic.com/">Privacy Policy</a><li>
+        <li><a href="https://www.instagram.com/_zhakkksybek_">Cookies</a><li>
+        <li><a href="https://privacy.umusic.com/terms/">Terms & Conditions</a><li>
+        </ul>
+        <div class="social__networks">
+        	<a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-instagram"></i></a>
+    		<a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-twitter"></i></a>
+    		<a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-facebook"></i></a>
+    		<a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-spotify"></i></a>
+    		<a href="https://www.instagram.com/iitu_kz/"><i class="fab fa-youtube"></i></a>
+    	</div>
+    	<div id="map">
+    	</div>
+	<script type="text/javascript">
+		var myVar;
+
+		function myFunction() {
+			myVar = setTimeout(showPage, 3000);
+		}
+
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("myDiv").style.display = "block";
+		}
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map('map', {
+				center: [43.223444, 76.906473],
+				zoom: 15,
+				controls: ['smallMapDefaultSet']
+			}, {
+				searchControlProvider: 'yandex#search'
+			}),
+
+			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+				'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				hintContent: 'Hello',
+				balloonContent: 'Это красивая метка'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/myIcon.png',
+				iconImageSize: [40, 45],
+				iconImageOffset: [10, -40]
+			});
+
+			myMap.geoObjects
+			.add(myPlacemark);
+		});
+		checkLogIn();
+	</script>
+    	<p class="copyright"> Copyright© 2022.Designed by Zhaksybek, Aisultan, Nurbolat IITU. All Rights Reserved</p>
+    </footer>       
+</body>
+</html>

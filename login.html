@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Log in</title>
+	  <link rel="stylesheet" href="css\style(login).css">
+      <script type="text/javascript" src="js/script.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <link rel="icon" href="">
+</head>
+<body>
+  <section class="Home">
+        
+    </section>
+    <header>
+           <p class="withEmail">Log in with email address</p>
+    </header>
+ <main > 
+    <div class="border">
+      <label for="emailField" aria-live="assertive" class="txt">Email address</label><br>
+       <input type="text" name="emailField" id="emailField" placeholder="Email address" class="inputs"><br>
+       <div id="emailError"></div>
+     <label for="passField" aria-live="assertive" class="txt">Password</label><br>
+       <input type="password" name="passField" id="passField" required placeholder="Password" class="inputs"><br>
+     <input type="checkbox" id="remember" name="remember" value="remember" checked="true">
+<label for="remember"> Remember me</label><br><br>
+     <div id="logMainErr"></div>
+ <footer>
+<div>
+     <button type="submit" class="btn" onclick='login()'><p>Log in</p></button>
+ </div><br><br>
+    <div class="textSignUp">
+      <span class="textSignUp">Don't have an account? <a href="signup.html"> Sign up</a></span>
+    </div>
+ </footer>
+ <script>
+$("img").animate({
+width: "300px"
+}, 1500);
+
+</script>
+</body>
+</html>
+
+
+
+
