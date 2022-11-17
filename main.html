@@ -32,9 +32,10 @@
             <li><a href="#">Contact</a></li>
         </ul>
         <div id="other-opt">
-            <div class="search">
-                <input type="search" name="search" id="search" placeholder="Search...">
-                <i class="fas fa-search"></i>
+            <div class="search"> 
+                <input class="query" type="search" name="search" id="search" placeholder="Search...">
+                <button class="searchBtn" type="submit"><i class="fas fa-search"></i></button>
+               
             </div>
             <button  id="signIn"> IITU UNIVERSITY </button>
         </div>
@@ -59,8 +60,8 @@
             <li><a href="#">Contact</a></li>
         </ul>
         <div class="Othersearch" style="margin: auto;">
-            <input type="search" class="query" name="search" id="Othersearch" placeholder="Search...">
-         <button class="searchBtn"><i class="fas fa-search"></i></button>
+            <input type="search" name="search" id="Othersearch" placeholder="Search...">
+            <i class="fas fa-search"></i>
         </div>
     </nav>
  <!-- Navbar section -->
@@ -447,15 +448,19 @@
  
     </div>
 <!-- ALL SHOWS  -->
- <script>
-   let query = document.querySelector('.query');
+
+<script>
+    let query = document.querySelector('.query');
     let searchBtn = document.querySelector('.searchBtn')
 
     searchBtn.onclick = function() {
         let url = 'https://www.google.com/search?q='+query.value;
         window.open(url, '_self');
+        // body...
     }
- </script>
+</script>
+ 
+ 
 </body>
 <script src="js/category.js"></script>
  
